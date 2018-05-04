@@ -1,0 +1,22 @@
+border a la derecha o ver la ilustracion del box general /**DONE
+cambiar radius input /**DONE
+achicar font size para que se adapte mejor a los sm
+
+puntos de paso 8x8px long 23x8px
+
+boton continuar color verde del primer paso
+
+
+padding bottom 3
+al segundo margin right 2px
+
+cambiar border focus 
+
+ver desde pantalla de 13
+
+agregar iconos
+
+1440x792
+
+
+1024x640 
