@@ -22,9 +22,11 @@ body {
     overflow: hidden; }
     body .fixedCol .primary {
       transition: all 0.3s ease-in-out;
-      overflow: hidden; }
+      overflow: hidden;
+      min-height: 50px; }
       body .fixedCol .primary .expanded {
-        padding: 30px 10px 0; }
+        padding: 30px 10px 0;
+        max-height: 600px; }
         body .fixedCol .primary .expanded .top h1 {
           font-size: 1.8rem;
           color: #0a7b88;
@@ -124,7 +126,10 @@ body {
       box-shadow: 5px 0px 7px #e9e9e9;
       background-color: #f9f9f9; }
       body .fixedCol .primary.collapsed .expanded {
-        display: none; }
+        transition: max-height 0.2s ease-out;
+        max-height: 0;
+        padding: 0;
+        overflow: hidden; }
       body .fixedCol .primary.collapsed .colCollapsed {
         display: block; }
         body .fixedCol .primary.collapsed .colCollapsed .row .title {
@@ -140,7 +145,7 @@ body {
             margin-left: 25px;
             font-weight: 600; }
           body .fixedCol .primary.collapsed .colCollapsed .row .title.mobileCollapsed {
-            display: none !important;
+            margin-top: 1000px;
             background-color: #0a7b88;
             display: block;
             width: 100%;
@@ -151,6 +156,9 @@ body {
               width: 15px;
               height: 15px;
               background-color: #fff; }
+            body .fixedCol .primary.collapsed .colCollapsed .row .title.mobileCollapsed.effect {
+              transition: all 0.3s ease-in-out;
+              margin-top: 0; }
         body .fixedCol .primary.collapsed .colCollapsed .row img {
           height: 1.2rem; }
         body .fixedCol .primary.collapsed .colCollapsed .row h6 {
@@ -182,30 +190,31 @@ body {
             outline: none; }
     body .fixedCol .secondary {
       transition: all 0.3s ease-in-out;
-      overflow: hidden; }
-      body .fixedCol .secondary .expanded {
-        display: none; }
-        body .fixedCol .secondary .expanded .top {
+      overflow: hidden;
+      display: none; }
+      body .fixedCol .secondary.expanded {
+        display: block; }
+        body .fixedCol .secondary.expanded .top {
           margin-top: 30px;
           margin-bottom: -5px; }
-          body .fixedCol .secondary .expanded .top h2 {
+          body .fixedCol .secondary.expanded .top h2 {
             font-size: 1rem; }
-          body .fixedCol .secondary .expanded .top img {
+          body .fixedCol .secondary.expanded .top img {
             height: 1.25rem; }
-          body .fixedCol .secondary .expanded .top .steps {
+          body .fixedCol .secondary.expanded .top .steps {
             display: inline-block; }
-            body .fixedCol .secondary .expanded .top .steps .dot {
+            body .fixedCol .secondary.expanded .top .steps .dot {
               height: 10px;
               width: 10px;
               background-color: #909090;
               border-radius: 50%;
               display: inline-block; }
-              body .fixedCol .secondary .expanded .top .steps .dot.long {
+              body .fixedCol .secondary.expanded .top .steps .dot.long {
                 height: 10px;
                 width: 30px;
                 border-radius: 10px;
                 background-color: #5643fc; }
-        body .fixedCol .secondary .expanded .btn {
+        body .fixedCol .secondary.expanded .btn {
           background-color: #5643fc;
           padding: 7px 0 8px 20px;
           font-size: 18px;
@@ -215,16 +224,16 @@ body {
           color: #fff;
           position: relative;
           font-weight: 600; }
-          body .fixedCol .secondary .expanded .btn img {
+          body .fixedCol .secondary.expanded .btn img {
             position: absolute;
             right: 4px;
             height: 2.25rem;
             top: 2px; }
-        body .fixedCol .secondary .expanded fieldset {
+        body .fixedCol .secondary.expanded fieldset {
           margin: 0;
           padding: 0;
           border: 0; }
-        body .fixedCol .secondary .expanded input {
+        body .fixedCol .secondary.expanded input {
           display: block;
           width: 100%;
           height: 3em;
@@ -237,37 +246,39 @@ body {
           color: #212121;
           outline: 0;
           transition: all 0.2s ease-in-out; }
-        body .fixedCol .secondary .expanded .form-label fieldset {
+        body .fixedCol .secondary.expanded .form-label fieldset {
           position: relative;
           margin-top: 20px; }
-          body .fixedCol .secondary .expanded .form-label fieldset input {
+          body .fixedCol .secondary.expanded .form-label fieldset input {
             background-color: transparent;
             color: #5643fc;
             border-bottom: 1px solid #585858;
             border-radius: 0; }
-          body .fixedCol .secondary .expanded .form-label fieldset img {
+          body .fixedCol .secondary.expanded .form-label fieldset img {
             position: absolute;
             top: 15px;
             height: 20px;
             right: 0; }
-        body .fixedCol .secondary .expanded .form-label label {
+        body .fixedCol .secondary.expanded .form-label label {
           position: absolute;
           top: 15px;
           left: 8px;
           color: #909090;
           transform: translate3d(0, 0, 0);
           transition: all 0.2s ease-in-out; }
-        body .fixedCol .secondary .expanded .form-css-label input[data-empty="false"], body .fixedCol .secondary .expanded .form-css-label input:valid, body .fixedCol .secondary .expanded .form-css-label input:focus {
+        body .fixedCol .secondary.expanded .form-css-label input[data-empty="false"], body .fixedCol .secondary.expanded .form-css-label input:valid, body .fixedCol .secondary.expanded .form-css-label input:focus {
           padding: 22px 8px 10px; }
-        body .fixedCol .secondary .expanded .form-css-label input:focus {
+        body .fixedCol .secondary.expanded .form-css-label input:focus {
           outline: 0;
           border-bottom: 1px solid #5643fc; }
-        body .fixedCol .secondary .expanded .form-css-label input[data-empty="false"] + label, body .fixedCol .secondary .expanded .form-css-label input:valid + label, body .fixedCol .secondary .expanded .form-css-label input:focus + label {
+        body .fixedCol .secondary.expanded .form-css-label input[data-empty="false"] + label, body .fixedCol .secondary.expanded .form-css-label input:valid + label, body .fixedCol .secondary.expanded .form-css-label input:focus + label {
           font-weight: 700;
           font-size: 12px;
           transform: translate3d(0, -20px, 0); }
+      body .fixedCol .secondary .expanded {
+        max-height: 600px; }
       body .fixedCol .secondary .colCollapsed {
-        display: block; }
+        display: none; }
       body .fixedCol .secondary footer p {
         margin-top: 11.75rem;
         padding-right: 20px; }
@@ -276,7 +287,10 @@ body {
     body .fixedCol .secondary.collapsed {
       display: block; }
       body .fixedCol .secondary.collapsed .expanded {
-        display: none; }
+        transition: max-height 0.2s ease-out;
+        max-height: 0;
+        padding: 0;
+        overflow: hidden; }
       body .fixedCol .secondary.collapsed .colCollapsed {
         display: block; }
         body .fixedCol .secondary.collapsed .colCollapsed .row h6 {
@@ -297,7 +311,6 @@ body {
           font-weight: 600;
           font-size: 1.3rem; }
         body .fixedCol .secondary.collapsed .colCollapsed .row .title.mobileCollapsed {
-          display: none !important;
           background-color: #5643fc;
           display: block;
           width: 100%;
@@ -322,42 +335,42 @@ body {
       display: none;
       transition: all 0.3s ease-in-out;
       overflow: hidden; }
-      body .fixedCol .terciary .expanded {
+      body .fixedCol .terciary.expanded {
         display: block;
         margin-left: 0;
         transition: all 0.3s ease-in-out; }
-        body .fixedCol .terciary .expanded .top {
+        body .fixedCol .terciary.expanded .top {
           margin-top: 30px;
           margin-bottom: 30px; }
-          body .fixedCol .terciary .expanded .top h2 {
+          body .fixedCol .terciary.expanded .top h2 {
             font-size: 1.05rem;
             margin-left: 10px;
             line-height: 1.3rem;
             margin-bottom: 0;
             margin-top: 20px; }
-          body .fixedCol .terciary .expanded .top img {
+          body .fixedCol .terciary.expanded .top img {
             height: 1.1rem; }
-          body .fixedCol .terciary .expanded .top .steps {
+          body .fixedCol .terciary.expanded .top .steps {
             position: absolute;
             right: 30px;
             top: 30px;
             text-align: right; }
-            body .fixedCol .terciary .expanded .top .steps p {
+            body .fixedCol .terciary.expanded .top .steps p {
               margin-bottom: 0;
               font-size: 20px;
               color: #fc6666; }
-            body .fixedCol .terciary .expanded .top .steps .dot {
+            body .fixedCol .terciary.expanded .top .steps .dot {
               height: 10px;
               width: 10px;
               background-color: #909090;
               border-radius: 50%;
               display: inline-block; }
-              body .fixedCol .terciary .expanded .top .steps .dot.long {
+              body .fixedCol .terciary.expanded .top .steps .dot.long {
                 height: 10px;
                 width: 30px;
                 border-radius: 10px;
                 background-color: #fc6666; }
-        body .fixedCol .terciary .expanded .box {
+        body .fixedCol .terciary.expanded .box {
           background-color: #fff;
           border: 1px solid #ebebeb;
           border-left: 6px solid #fc6666;
@@ -366,18 +379,18 @@ body {
           font-size: 15px;
           font-weight: 600;
           margin-bottom: 20px; }
-          body .fixedCol .terciary .expanded .box .msj {
+          body .fixedCol .terciary.expanded .box .msj {
             font-size: 0.9rem;
             line-height: 1.1rem;
             font-weight: 400; }
-          body .fixedCol .terciary .expanded .box p:first-child {
+          body .fixedCol .terciary.expanded .box p:first-child {
             margin-bottom: 5px; }
-          body .fixedCol .terciary .expanded .box p:last-child {
+          body .fixedCol .terciary.expanded .box p:last-child {
             font-size: 2rem;
             margin-bottom: 0; }
-        body .fixedCol .terciary .expanded .msjContacto {
+        body .fixedCol .terciary.expanded .msjContacto {
           margin-left: 10px; }
-        body .fixedCol .terciary .expanded .btn {
+        body .fixedCol .terciary.expanded .btn {
           background-color: #fc6666;
           padding: 7px 0 8px 20px;
           font-size: 18px;
@@ -386,16 +399,29 @@ body {
           color: #fff;
           position: relative;
           font-weight: 600; }
-          body .fixedCol .terciary .expanded .btn img {
+          body .fixedCol .terciary.expanded .btn img {
             position: absolute;
             right: 4px;
             height: 2.35rem;
             top: 2px; }
-        body .fixedCol .terciary .expanded footer p {
+        body .fixedCol .terciary.expanded footer p {
           font-size: 11px;
           padding-right: 0px; }
     body .fixedCol .contact {
-      display: none; }
+      transition: all 0.3s ease-in-out;
+      background-color: #fff;
+      display: none;
+      position: absolute;
+      height: 100%; }
+      body .fixedCol .contact .expanded {
+        transition: all 0.3s ease-in-out;
+        position: absolute;
+        top: 800px; }
+      body .fixedCol .contact.expanded {
+        display: block; }
+        body .fixedCol .contact.expanded .expanded {
+          transition: all 0.3s ease-in-out;
+          top: 0; }
       body .fixedCol .contact h2 {
         margin-top: 20px; }
       body .fixedCol .contact .btn {
