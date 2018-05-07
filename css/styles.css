@@ -432,7 +432,7 @@ body {
         text-align: left;
         border-radius: 50px;
         margin-top: 38px;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
         color: #585858;
         position: relative;
         font-weight: 600; }
@@ -504,6 +504,11 @@ body {
         color: #fff;
         position: relative;
         font-weight: 600; }
+      body .fixedCol .msjFinal.expanded {
+        display: block;
+        position: absolute;
+        background-color: #fff;
+        height: 100%; }
   body footer p {
     font-size: 11px;
     padding-right: 100px; }

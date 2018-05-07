@@ -78,6 +78,12 @@ $(function () {
             
         });
 
+        $('.btn-expand-collapse4').click(function (e) {
+            $('.contact').toggleClass('expanded');
+            $('.msjFinal').toggleClass('expanded');
+            
+        });
+
 
     }
 });
